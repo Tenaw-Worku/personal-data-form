@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Forms</h1>
+    </header>
+    <main>
+        <form>
+            <!-------------------- PERSONAL DATA ------------------>
+            <fieldset id="fieldset-personal-data">
+                <legend>Personal data</legend>
+
+                <label for="txt-input-first-name">First name:</label>
+                <input type="text" id="txt-input-first-name" required placeholder="Max">
+
+                <label for="txt-input-last-name">Last name:</label>
+                <input type="text" id="txt-input-last-name" required placeholder="Mustermann">
+
+                <label for="txt-input-street">Street:</label>
+                <input type="text" id="txt-input-street" placeholder="Musterstrasse">
+
+                <label for="txt-input-zipcode">Zipcode:</label>
+                <input type="text" id="txt-input-zipcode" placeholder="10000">
+
+                <label for="txt-input-city">City:</label>
+                <input type="text" id="txt-input-city" placeholder="Berlin">
+
+                <label for="tel-input-phone">Phone:</label>
+                <input  type="tel" 
+                        pattern="[0-9]{3,5}\/[0-9]{3,10}"
+                        required
+                        id="tel-input-phone"
+                        placeholder="030/010213230">
+
+                <label for="email-input-email">E-Mail:</label>
+                <input type="email" id="email-input-email" required placeholder="max@mustermann.de">
+
+                <label for="textarea-comments">Comments:</label>
+                <textarea   id="textarea-comments"
+                            placeholder="Erzaehlen Sie uns mehr ueber wichtige Farben, etc."></textarea>
+            </fieldset>
+
+            <!-------------------- PRODUCTS ------------------>
+            <fieldset id="fieldset-products">
+                <legend>Products</legend>
+                
+                <label for="fieldset-web-design">Web design:</label>
+                <fieldset id="fieldset-web-design">
+                    <input type="radio" id="radio-input-individual" value="individual" name="web-design">
+                    <label for="radio-input-individual">Individual</label>
+                    <input type="radio" id="radio-input-template" value="template" name="web-design">
+                    <label for="radio-input-template">Template</label>
+                </fieldset>
+
+
+                <label for="fieldset-web-development">Web development:</label>
+                <fieldset id="fieldset-web-development">
+                    <fieldset>
+                        <input type="checkbox" id="checkbox-input-html-css">
+                        <label for="checkbox-input-html-css">HTML & CSS</label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <input type="checkbox" id="checkbox-input-js">
+                        <label for="checkbox-input-js">JavaScript</label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <input type="checkbox" id="checkbox-input-mongo-db">
+                        <label for="checkbox-input-mongo-db">MongoDB</label>
+                    </fieldset>
+                </fieldset>
+
+
+                <label for="date-input-start">Project start</label>
+                <input type="date" id="date-input-start">
+
+                <label for="date-input-end">Project end</label>
+                <input type="date" id="date-input-end">
+
+
+                <label for="select-category">Category</label>
+                <select id="select-category">
+                    <option value="personal">Personal</option>
+                    <option value="business">Business</option>
+                    <option value="portfolio">Portfolio</option>
+                </select>
+            </fieldset>
+
+            
+            <button type="submit">Order our services</button>
+        </form>
+    </main>
+</body>
+</html>
