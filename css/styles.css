@@ -1,0 +1,111 @@
+/* Kleines CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Vergroessere body */
+body {
+    height: 200vh;
+}
+
+
+header {
+    background-color: #393b43;
+    color: white;
+    padding: 1em;
+    font-family: sans-serif;
+}
+
+/* Main verkleinern und zentrieren */
+main form {
+    width: 40%;
+    margin: 1em auto 0 auto;
+}
+
+/* Fieldsets auf volle Breite ziehen und Abstaende anpassen */
+main form > fieldset {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+/* Fieldset Legende anpassen */
+main form fieldset legend {
+    font-size: 1.5em;
+    color: #5738bd;
+    padding: 0 0.5em;
+}
+
+/* Labels als Block setzen */
+main form #fieldset-personal-data label {
+    display: block;
+}
+
+/* Inputs auf volle Breite setzen */
+main form #fieldset-personal-data input {
+    width: 100%;
+}
+
+/* Inputs Abstand nach unten geben */
+main form fieldset input,
+main form fieldset textarea {
+    margin-bottom: 1em;
+}
+
+/* Products Fieldset Rahmen entnehmen und Innnenabstand nehmen */
+#fieldset-products fieldset {
+    border: none;
+    padding: 0.4em;
+}
+
+/* Inputs fuer Date und Selects auf volle Breite setzen */
+#fieldset-products input[type="date"],
+#fieldset-products select {
+    width: 100%;
+}
+
+/* Submit button */
+main form button[type="submit"] {
+    background-color: green;
+    color: white;
+    padding: 1em;
+
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* Textarea vom personal data fieldset anpassen */
+#fieldset-personal-data textarea {
+    resize: none;
+    width: 100%;
+    height: 10rem;
+}
+
+/* Setze Fieldset Labels auf erster Kindesebene */
+#fieldset-personal-data > label,
+#fieldset-products > label {
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-bottom: 0.2em;
+}
+
+
+/* 
+    Setze Borderfarbe, Innenabstand und Outlinefarbe 
+    aller Input, die NICHT vom Typen "checkbox" oder "radio" sind.
+    */
+main form input:not(input[type ~= "checkbox radio"]),
+#fieldset-personal-data textarea,
+#fieldset-personal-data select {
+    border: 1px solid grey;
+    padding: 0.3rem 0;
+    outline-color: rgb(88, 202, 240);
+}
+
+/* Aendere Highlightfarbe der Checkboxen und Radio Inputs */
+#fieldset-web-design input,
+#fieldset-web-development input {
+    accent-color: green;
+}
